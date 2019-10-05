@@ -3,7 +3,7 @@ import './App.css';
 import {HashRouter as Router, Route} from 'react-router-dom';
 
 // import components
-import List from '../List/List';
+import List from '../MovieList/MovieList';
 import Details from '../Details/Details';
 import Edit from '../Edit/Edit';
 
