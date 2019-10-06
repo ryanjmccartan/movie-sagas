@@ -1,16 +1,30 @@
 import React, {Component} from 'react';
-import {HashRouter as Router, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class Details extends Component {
     render() {
         return(
-            <Router>
+            <div>
                 <p>Details Page</p>
+                {this.props.reduxState.movies.map(movie => {
+                    if(movie.id == this.props.match.params.id){
+                        return <div>
+                            <p>{movie.description}</p>
+                        </div>
+                    }}
+                )}
+                  
                 <Link to="/"><button>Back to List</button></Link>
                 <button>Edit</button>
-            </Router>
+            </div>
+            
         )
     }
 }
 
-export default Details;
+const putStateOnProps = (reduxState) => ({
+    reduxState
+})
+
+export default connect(putStateOnProps)(Details);
