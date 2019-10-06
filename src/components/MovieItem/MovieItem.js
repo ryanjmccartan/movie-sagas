@@ -17,7 +17,7 @@ getMovies = () => {
         return(
             <div>
                 <p>{this.props.movieItem.title}</p>
-                <button onClick= {() => this.props.seeMovie(this.props.movieItem.id)}><img src={this.props.movieItem.poster}/></button>
+                <button onClick= {() => this.props.seeMovie(this.props.movieItem.id)}><img src={this.props.movieItem.poster} alt="movie poster"/></button>
             </div>
         )
     }

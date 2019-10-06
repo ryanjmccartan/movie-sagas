@@ -1,8 +1,18 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 class Details extends Component {
+
+
+buttonFunction = (button) => {
+    if (button === 'back'){
+        this.props.history.push('/');
+    }
+    else if(button === 'edit'){
+        this.props.history.push('/edit');
+    }
+}
+
     render() {
         return(
             <div>
@@ -24,8 +34,8 @@ class Details extends Component {
                     }}
                 )}
                   
-                <Link to="/"><button>Back to List</button></Link>
-                <button>Edit</button>
+                <button onClick={() => this.buttonFunction('back')}>Back to List</button>
+                <button onClick={() => this.buttonFunction('edit')}>Edit</button>
             </div>
             
         )
