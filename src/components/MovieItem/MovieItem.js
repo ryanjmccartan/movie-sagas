@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
+import {HashRouter as Router, Link} from 'react-router-dom';
+
 
 class List extends Component {
     
@@ -14,11 +16,11 @@ getMovies = () => {
 
     render() {
         return(
-            <>
-            <p>{this.props.movieItem.title}</p>
-            <img src={this.props.movieItem.poster}/>
-            <p>{this.props.movieItem.description}</p>
-            </>
+            <Router>
+                <p>{this.props.movieItem.title}</p>
+                <Link to="/details"><button><img src={this.props.movieItem.poster}/></button></Link>
+                <p>{this.props.movieItem.description}</p>
+            </Router>
         )
     }
 }
