@@ -16,7 +16,7 @@ buttonFunction = (button) => {
     render() {
         return(
             <div>
-                <p>Details Page</p>
+                <p>Details</p>
                 {this.props.reduxState.movies.map(movie => {
                     if(movie.id == this.props.match.params.id){
                         return <div>

@@ -13,8 +13,9 @@ getMovies = () => {
 }
 
 seeMovie = (id) => {
-    this.props.history.push('/details/' + id)
-    this.props.dispatch({type: 'FETCH_GENRE', payload: id})
+    this.props.history.push('/details/' + id);
+    this.props.dispatch({type: 'FETCH_GENRE', payload: id});
+    this.props.dispatch({type: 'SINGLE_MOVIE', payload: id})
   }
 
 
