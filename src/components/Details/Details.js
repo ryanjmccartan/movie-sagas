@@ -14,6 +14,15 @@ class Details extends Component {
                         </div>
                     }}
                 )}
+                <h3>Genres:</h3>
+                {this.props.reduxState.genres.map(genre => {
+                    if(genre.id = this.props.match.params.id){
+                        return <div>
+                        
+                        <p>{genre.name}</p>
+                        </div>
+                    }}
+                )}
                   
                 <Link to="/"><button>Back to List</button></Link>
                 <button>Edit</button>

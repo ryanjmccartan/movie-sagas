@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
     })
 });
 
-// GET genre
+// GET genres
 router.get('/:id', (req, res) => {
     const queryText = `SELECT * FROM "genres"
     JOIN "movies_genres" ON "movies_genres".genres_id = "genres".id
