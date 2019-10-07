@@ -21,12 +21,12 @@ handleChange = (event, movieDetails) => {
 
 saveEdit = (movie) => {
     this.props.dispatch({type: 'EDIT_MOVIE', payload: movie});
-    // this.props.history.push(`/details/${this.state.id}`)
+    this.props.history.push(`/details/${this.state.id}`);
 }
 
-// cancel = (id) => {
-//     this.props.history.push('/');
-// }
+cancel = (id) => {
+    this.props.history.push(`/details/${this.state.id}`);
+}
 
 
     render() {
@@ -39,7 +39,7 @@ saveEdit = (movie) => {
                 <textarea onChange={(event) => {this.handleChange(event, "description")}} placeholder="Change movie description"/>
                 <br/>
                 <button onClick={() => {this.saveEdit(this.state)}}>Save</button>
-                <button onClick={this.cancel}>Cancel</button>
+                <button onClick={() => {this.cancel()}}>Cancel</button>
                 <p>{this.state.title}</p>
                 <p>{this.state.description}</p>
                 <p>{this.state.id}</p>
