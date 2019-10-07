@@ -1,6 +1,6 @@
 # Name of Application
 ​
-I created a movie list application that allows users to select a movie and view its details. Upon clicking the movie poster, the user is taken to a details page with the movie's description and related genres. There is an "edit" button and a "back to list" button that takes the user to the home page. The edit button takes the user to a page and allows them to change the movie's title and/or description. 
+I created a movie list application that allows users to select a movie and view its details. Upon clicking the movie poster, the user is taken to a details page with the movie's description and related genres. There is an "edit" button and a "back to list" button that takes the user to the home page. The edit button takes the user to another page that allows them to change the movie's title and/or description. 
 ​
 ## Built With
 ​
